@@ -1,0 +1,4 @@
+Echo “enter a number”
+Read n
+Square =’ expr $n \*$n’
+Echo “ $square”

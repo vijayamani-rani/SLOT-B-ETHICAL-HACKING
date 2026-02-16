@@ -1,0 +1,39 @@
+#!/bin/bash
+
+echo "--- Mark List Preparation ---"
+
+# Prompt for student name
+read -p "Enter student name: " student_name
+
+# Prompt for marks in multiple subjects
+read -p "Enter marks for Subject 1: " sub1_marks
+read -p "Enter marks for Subject 2: " sub2_marks
+read -p "Enter marks for Subject 3: " sub3_marks
+
+# Calculate total marks
+total_marks=$((sub1_marks + sub2_marks + sub3_marks))
+
+# Calculate percentage (assuming max marks per subject is 100)
+percentage=$(echo "scale=2; ($total_marks / 300) * 100" | bc)
+
+# Determine grade
+if (( $(echo "$percentage >= 90" | bc -l) )); then
+    grade="A"
+elif (( $(echo "$percentage >= 80" | bc -l) )); then
+    grade="B"
+elif (( $(echo "$percentage >= 70" | bc -l) )); then
+    grade="C"
+elif (( $(echo "$percentage >= 60" | bc -l) )); then
+    grade="D"
+else
+    grade="F"
+fi
+
+# Display the mark list
+echo -e "\n--- Mark List for $student_name ---"
+echo "Subject 1 Marks: $sub1_marks"
+echo "Subject 2 Marks: $sub2_marks"
+echo "Subject 3 Marks: $sub3_marks"
+echo "Total Marks: $total_marks"
+echo "Percentage: $percentage%"
+echo "Grade: $grade"

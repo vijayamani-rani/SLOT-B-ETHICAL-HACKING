@@ -1,0 +1,24 @@
+Viewing & Managing File Contents
+• less – Views file content one page at a time (scrollable).
+• head – Displays the first 10 lines of a file.
+• tail – Displays the last 10 lines of a file.
+• sort – Sorts lines of text in a file alphabetically or numerically.
+
+User & System Information
+• users – Shows all users currently logged in.
+• who – Displays who is logged into the system.
+• uptime – Shows how long the system has been running and the load average.
+• date – Displays or sets the system’s date and time.
+• history – Shows the list of previously executed commands.
+
+Basic File and Directory Commands
+• ls – Lists all files and directories in the current folder.
+• cat – Displays the contents of a file on the terminal.
+• mkdir – Creates a new directory (folder).
+• mv – Moves or renames files or directories.
+• cp – Copies files or directories.
+• cd – Changes the current working directory.
+• pwd – Shows the path of the current working directory.
+• rm – Deletes files or directories.
+• touch – Creates an empty file or updates the timestamp of an existing one.
+• tree – Displays the directory structure in a tree-like format.
